@@ -68,3 +68,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# Hablemos Español
+
+## Instalar la app
+
+## Conectarse a Heroku
+
+1. Loggearse a Heroku usando: `heroku login`
+2. Conectarse al branch remoto de heroku:
+    `git remote add heroku https://git.heroku.com/obscure-plateau-81075.git`
+3. De aquí en adelante, para hacer deploys a heroku:
+    `git push heroku master`
+   Seguir con mucho cuidado... ya que esto sería producción.
