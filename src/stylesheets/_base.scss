@@ -1,0 +1,70 @@
+/*
+
+  Basic styles that set the visibility of tags and all tags in general.
+  No classnames or IDs should be placed in this file and in general,
+  the default visual representation of tags should be set.
+
+*/
+
+html {
+    min-height: 100vh;
+    font-size: $base-font-size;
+    line-height: 1.5;
+    font-family: $base-font-face, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  * {
+    margin-top: 0;
+    box-sizing: border-box;
+  }
+  
+  *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  a {
+    // color: $color-yodel-green;
+    outline: 0;
+    font-weight: bold;
+  }
+  
+  h1, h2, h3, h4, h5, h6, b, strong {
+    font-family: $base-font-face;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  svg {
+    width: 100%;
+  }
+  
+  /* 
+    For the CIVIC cookie consent view:
+    The svg width 100% we have as a base
+    disrupts the styling for svgs in the
+    cookie consent controller. This prevents
+    that issue
+  */
+  #ccc svg {
+    width: unset;
+  }
+  
+  label {
+    cursor: pointer;
+  }
+  
+  input, textarea {
+    font-family: $base-font-face, "Arial";
+  }
+  
+  /* See https://stackoverflow.com/questions/71074/how-to-remove-firefoxs-dotted-outline-on-buttons-as-well-as-links */
+  :focus { outline:none; }
+  ::-moz-focus-inner { border: 0; }
+  

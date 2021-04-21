@@ -1,0 +1,23 @@
+@import "stylesheets/variables";
+@import "stylesheets/functions";
+@import "stylesheets/mixins";
+
+@import "stylesheets/base";
+@import "stylesheets/layout";
+
+
+@import "stylesheets/pages/Home.scss";
+
+body {
+  margin: 0;
+}
+
+.main-page-header {
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
+
+  @include media-desktop {
+    font-size: 40px;
+  }
+}

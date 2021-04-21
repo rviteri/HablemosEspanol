@@ -1,0 +1,19 @@
+/* Development stuff */
+
+$dev-enable-grid-background: false !default;
+
+/* Colours */
+$color-white: #FFF;
+
+/* Units and typography */
+$base-font-size: 17px;
+$base-font-face: ('sans-serif', 'Arial');
+
+/* Misc variables that are used in multiple contexts */
+$border-radius: 5px;
+$vertical-spacing: 20px;
+
+/* Grid settings */
+$grid-column-count: 12;
+$grid-colum-to-gutter-ratio-column: 4;
+$grid-colum-to-gutter-ratio-gutter: 1;

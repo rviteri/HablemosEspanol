@@ -1,16 +1,18 @@
 import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Home from './pages/Home'
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="">
-        
-      </header>
-      <body>
-        Hola mundo!!
-      </body>
-    </div>
+    <Router>
+      {/* <Navbar></Navbar> */}
+      <Switch>
+          <Route path="/" exact component={Home}></Route>
+          {/* <Route path="/equipo" exact component={Team}></Route>
+          <Route path="/contactanos" exact component={ContactUs}></Route> */}
+      </Switch>
+    </Router>
   );
 }
 
