@@ -1,19 +1,47 @@
 .navbar {
-    @include gradient(#84A9D4, #3E7CBB);
+    background-color: black;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:space-between;
     width: 100%;
     height: 90px;
+    padding: 2% 5%;
+
+    .logo-container {
+        flex: 0.4;
+    }
+
+    .menu-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 0.6;
+    }
+
+    .navbar-logo,
+    .navbar-link {
+        text-decoration: none;
+        color: $color-white;
+    }
+
+    &.-white {
+        background-color: $color-white;
+
+        .navbar-logo,
+        .navbar-link {
+            color: $color-black;
+        }
+    }
 }
 
-.navbar-container {
-    @include grid-container;
-    display: flex;
-    padding: 0px 5%;
+.navbar-logo {
+    font-size: $base-font-size + 10;
+    letter-spacing: 2px;
     width: 100%;
-    align-items: center;
-    justify-content: space-between;
+}
+
+.navbar-link {
+    margin-right: 7%;
 }
 
 .navbar-list {
@@ -34,19 +62,10 @@
 
     .nav-links {
         text-decoration: none;
-        color: $color-white;
+        color: $color-black;
         font-size: 20px;
     }
 
-}
-
-.navbar-logo {
-    @include grid-column(3);
-    // margin: 5px;
-    img {
-        height: 60px;
-    }
-    
 }
 
 .nav-menu {
@@ -81,15 +100,6 @@
         display: none;
     }
 
-    .navbar-logo {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        justify-content: center;
-        margin: 0;
-
-    }
 
     .menu-icon {
         position: absolute;

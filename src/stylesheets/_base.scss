@@ -67,4 +67,31 @@ html {
   /* See https://stackoverflow.com/questions/71074/how-to-remove-firefoxs-dotted-outline-on-buttons-as-well-as-links */
   :focus { outline:none; }
   ::-moz-focus-inner { border: 0; }
+
+  .regular-button {
+    background-color: $color-white;
+    color: $color-black;
+    text-decoration: none;
+    padding: 20px;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: $dark-background;
+      color: $color-white;
+    }
+
+    &.-secondary-style {
+      background-color: $dark-background;
+      color: $color-white;
+
+      &:hover {
+        background-color: $color-white;
+        color: $color-black;
+      }
+    }
+
+    &.-short {
+      padding: 15px 20px;
+    }
+  }
   
