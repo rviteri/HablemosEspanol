@@ -7,7 +7,7 @@ function Home () {
 
     return (
         <>
-            <Header></Header>
+            <Header whiteStyle={false}></Header>
             <div className="main-page-hero-banner">
               {t('hablemos_espanol')}
             </div>
