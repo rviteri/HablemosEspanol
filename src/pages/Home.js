@@ -1,5 +1,4 @@
 import React from 'react';
-// import './../stylesheets/Home.scss';
 import Header from './../components/Header';
 import { useTranslation } from 'react-i18next';
 
