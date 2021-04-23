@@ -83,3 +83,6 @@ Heroku va a ser exclusivamente para presentar cambios nuevos antes de publicarlo
 3. De aquí en adelante, para hacer deploys a heroku:
     `git push heroku master`
    
+## Para iconos
+Estamos usando ionicons por medio de una libreria llamada `react-ionicons`. Los iconos se pueden encontrar aqui:
+("Iconos")[https://react-ionicons.netlify.app/]
