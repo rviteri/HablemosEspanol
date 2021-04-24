@@ -15,7 +15,7 @@ export default function InfoBlock({title, htmlContent, pictureUrl, reversed = fa
 
   const scrollHandler = () => {
         
-      if(window.pageYOffset + window.innerHeight >= blockRef.current.offsetTop)
+      if(blockRef.current && window.pageYOffset + window.innerHeight >= blockRef.current.offsetTop)
           setBlockVisible(true);
       
   }

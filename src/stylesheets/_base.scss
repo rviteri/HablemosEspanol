@@ -94,4 +94,29 @@ html {
       padding: 15px 25px;
     }
   }
+
+  .section-under-construction {
+    padding-top: 90px;
+    background-color: $color-light-brown;
+
+    .under-construction-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .under-construction-text {
+      display: flex;
+      @include push-down;
+      
+      h1 {
+        margin-left: 20px;
+      }
+    }
+
+    .under-construction-picture {
+      max-width: 400px;
+    }
+  }
   
