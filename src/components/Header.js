@@ -49,7 +49,7 @@ function Header ({whiteStyle = false, transparent = true}) {
                     {!menuOpen ?
                         <div className="mobile-menu-container" onClick={toggleMenu}>
                             <MenuOutline
-                                color={whiteStyle ? '#000000' : '#FFFFFF'} 
+                                color={whiteStyle && !headerTransparentStyle ? '#000000' : '#FFFFFF'} 
                                 title={"menu"}
                                 height="40px"
                                 width="40px"/>
