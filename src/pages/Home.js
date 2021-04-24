@@ -21,6 +21,16 @@ function Home () {
                 withBottomMargin={false}
                 imageUrl="/images/bg/background_home.jpeg"
                 backgroundYPosition="90%"></HeroBanner>
+            <section className="section-home-motto-and-intro">
+                <div className="section-content section-content-motto-and-intro">
+                    <div className="motto-container">
+                        {t("home_motto")}
+                    </div>
+                    <div className="intro-container">
+                        {t("home_intro")}
+                    </div>
+                </div>
+            </section>
             <Footer></Footer>
         </>
     );
