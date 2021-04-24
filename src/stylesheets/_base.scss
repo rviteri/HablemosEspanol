@@ -72,7 +72,7 @@ html {
     background-color: $color-white;
     color: $color-black;
     text-decoration: none;
-    padding: 20px;
+    padding: 20px 25px;
     transition: 0.2s;
 
     &:hover {
@@ -91,7 +91,7 @@ html {
     }
 
     &.-short {
-      padding: 15px 20px;
+      padding: 15px 25px;
     }
   }
   
