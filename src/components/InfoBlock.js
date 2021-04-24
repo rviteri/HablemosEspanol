@@ -1,9 +1,28 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react';
 
 export default function InfoBlock({title, htmlContent, pictureUrl, reversed = false}) {
+  
+  const blockRef = useRef();
+  const [blockVisible, setBlockVisible] = useState(false);
+
+  useEffect(() => {
+        
+      window.addEventListener('scroll', scrollHandler);
+    
+      return () => window.removeEventListener('scroll', scrollHandler);
+      
+  }, []);
+
+  const scrollHandler = () => {
+        
+      if(window.pageYOffset + window.innerHeight >= blockRef.current.offsetTop)
+          setBlockVisible(true);
+      
+  }
+
   return (
-    <section className="section-info-block">
-      <div className={`section-content info-block-container -not-visible${reversed ? " -reversed" : ""}`}>
+    <section ref = {blockRef} className="section-info-block">
+      <div className={`section-content info-block-container ${!blockVisible ? "-not-visible" : ""}${reversed ? " -reversed" : ""}`}>
         <div className="info-block__picture-container">
           <img className="info-block__picture" src={pictureUrl}></img>
         </div>
