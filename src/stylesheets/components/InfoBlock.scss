@@ -40,11 +40,11 @@
     }
   }
 
-  @include media-mobile-only {
-    &.-not-visible {
-      opacity: 0%;
-    }
-  }
+  // @include media-mobile-only {
+  //   &.-not-visible {
+  //     opacity: 0%;
+  //   }
+  // }
 }
 
 .info-block__picture-container {

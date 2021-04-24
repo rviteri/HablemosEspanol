@@ -6,7 +6,6 @@ export default function InfoBlock({title, htmlContent, pictureUrl, reversed = fa
   const [blockVisible, setBlockVisible] = useState(false);
 
   useEffect(() => {
-        
       window.addEventListener('scroll', scrollHandler);
     
       return () => window.removeEventListener('scroll', scrollHandler);
@@ -14,9 +13,10 @@ export default function InfoBlock({title, htmlContent, pictureUrl, reversed = fa
   }, []);
 
   const scrollHandler = () => {
-        
-      if(blockRef.current && window.pageYOffset + window.innerHeight >= blockRef.current.offsetTop)
-          setBlockVisible(true);
+      if(blockRef.current && window.pageYOffset + window.innerHeight >= blockRef.current.offsetTop) {
+        window.removeEventListener('scroll', scrollHandler);
+        setBlockVisible(true);
+      }
       
   }
 
