@@ -1,6 +1,20 @@
 .section-hero-banner {
   position: relative;
   height: 90vh;
+
+  &.-short-hero {
+    height: 450px;
+    .section-hero-banner-content {
+      padding: 0;
+    }
+  }
+
+  &.-big-title {
+    .hero-banner-title {
+      font-size: $base-font-size + 40;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .section-hero-banner-background {

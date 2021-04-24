@@ -62,6 +62,13 @@ function Home () {
                 htmlContent={sobreMiContentBlock}
                 pictureUrl="/images/sobre_mi.jpeg"
                 reversed={true}></InfoBlock>
+            <HeroBanner
+                title={t("hablemos")}
+                hasBigTitle={true}
+                withBottomMargin={true}
+                imageUrl="/images/bg/hablemos.jpg"
+                isShortHero={true}
+                backgroundYPosition="90%"></HeroBanner>
             <Footer></Footer>
         </div>
     );

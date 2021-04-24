@@ -18,5 +18,6 @@ export const en = {
     "info_del_curso_item_6": "€90 por curso para el público general.",
     "sobre_mi": "Sobre mí",
     "sobre_mi_texto": "¡Hola! Soy Pamela y enseño español en línea desde 2015 y en la SKB de la Universidad Técnica Berlin desde 2018. Soy Licenciada en Enseñanza del Español como Lengua Extranjera por la Universidad Nacional Autónoma de México. Siendo yo misma estudiante de una lengua extranjera, he enfrentado las mismas dificultades que tú al aprender un nuevo idioma. Por eso es que he decidido desarrollar este curso enfocado exclusivamente en la práctica oral, y reforzando la gramática aprendida en cursos previos.",
+    "hablemos": "Hablemos"
   }
 }
