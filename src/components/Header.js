@@ -3,10 +3,10 @@ import { useTranslation } from 'react-i18next';
 import {Link} from 'react-router-dom';
 import { MenuOutline, CloseOutline } from 'react-ionicons'
 
-function Header ({whiteStyle = false}) {
+function Header ({whiteStyle = false, transparent = true}) {
     const { t, i18n } = useTranslation();
     const [menuOpen, setMenuOpen] = useState(false);
-    const [headerWhiteStyle, setHeaderWhiteStyle] = useState(whiteStyle);
+    const [headerTransparentStyle, setHeadertransparentStyle] = useState(transparent);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -18,9 +18,9 @@ function Header ({whiteStyle = false}) {
 
     const handleScroll = () => {
         if (window.scrollY > 20) {
-            setHeaderWhiteStyle(true);
+            setHeadertransparentStyle(false);
         } else {
-            setHeaderWhiteStyle(false);
+            setHeadertransparentStyle(transparent);
         }
     };
 
@@ -28,7 +28,7 @@ function Header ({whiteStyle = false}) {
 
     return (
         <>
-            <div className={`navbar ${menuOpen ? "-menu-open" : ""} ${headerWhiteStyle ? "-white" : ""}`}>
+            <div className={`navbar${menuOpen ? " -menu-open" : ""}${whiteStyle && !headerTransparentStyle ? " -white" : ""}${!whiteStyle && !headerTransparentStyle ? " -dark" : ""}`}>
                 <div className="logo-container">
                     <Link to="/" className="navbar-logo">
                         {t("hablemos_espanol")}
@@ -48,7 +48,7 @@ function Header ({whiteStyle = false}) {
                 {!menuOpen ?
                     <div className="mobile-menu-container" onClick={toggleMenu}>
                         <MenuOutline
-                            color={headerWhiteStyle ? '#000000' : '#FFFFFF'} 
+                            color={whiteStyle ? '#000000' : '#FFFFFF'} 
                             title={"menu"}
                             height="40px"
                             width="40px"/>

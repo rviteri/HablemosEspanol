@@ -1,6 +1,6 @@
 .navbar {
     position: fixed;
-    background-color: black;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content:space-between;
@@ -29,6 +29,15 @@
     .navbar-link {
         text-decoration: none;
         color: $color-white;
+    }
+
+    &.-dark {
+        background-color: $dark-background;
+
+        .navbar-logo,
+        .navbar-link {
+            color: $color-white;
+        }
     }
 
     &.-white,
