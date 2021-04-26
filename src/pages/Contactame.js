@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Header from './../components/Header';
 import Footer from './../components/Footer';
-import HeroBanner from './../components/HeroBanner';
-import UnderConstruction from './../components/UnderConstruction';
-import PriceColumn from './../components/PriceColumn';
 import { useTranslation } from 'react-i18next';
-import ReactMarkdown from 'react-markdown';
 import emailjs from 'emailjs-com';
 
 export default function Contactame() {
@@ -23,7 +19,7 @@ export default function Contactame() {
 
     setBlockForm(true);
 
-    emailjs.sendForm(process.env.REACT_APP_CONTACT_US_EMAILJS_SERVICE, process.env.REACT_APP_CONTACT_US_EMAILJS_TEMPLATE, e.target, process.env.REACT_APP_EMAILJS_USER_ID)
+    emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE, process.env.REACT_APP_CONTACT_US_EMAILJS_TEMPLATE, e.target, process.env.REACT_APP_EMAILJS_USER_ID)
     .then((result) => {
         setShowSuccessMessage(true);
     }, (error) => {

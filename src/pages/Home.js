@@ -68,6 +68,7 @@ function Home () {
                 withBottomMargin={true}
                 imageUrl="/images/bg/hablemos.jpg"
                 isShortHero={true}
+                notTitleHero={true}
                 backgroundYPosition="90%"></HeroBanner>
             <Footer></Footer>
         </div>

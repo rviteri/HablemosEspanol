@@ -1,9 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 
-export default function HeroBanner({title, subtitle, buttonText, buttonUrl, verticalAlignment = "middle", horizontalAlignment="center", hasBigTitle = false, withBottomMargin = false, imageUrl, backgroundYPosition = "center", isShortHero = false}) {
+export default function HeroBanner({title, subtitle, buttonText, buttonUrl, verticalAlignment = "middle", horizontalAlignment="center", hasBigTitle = false, withBottomMargin = false, imageUrl, backgroundYPosition = "center", isShortHero = false, notTitleHero = false}) {
   return (
-    <section className={`section-hero-banner${isShortHero ? " -short-hero" : ""}${hasBigTitle ? " -big-title" : ""}`}>
+    <section className={`section-hero-banner${isShortHero ? " -short-hero" : ""}${hasBigTitle ? " -big-title" : ""}${notTitleHero ? "-not-title-hero" : ""}`}>
       <div className="section-hero-banner-background" style={{backgroundImage: `url(${imageUrl})`, backgroundPositionY: `${backgroundYPosition}`}}></div>
       <div className={`section-content section-hero-banner-content${ ` -${verticalAlignment}`}${ ` -${horizontalAlignment}`}`}>
         <h1 className="hero-banner-title">

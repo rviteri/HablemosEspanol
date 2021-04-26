@@ -59,5 +59,14 @@ export const en = {
     "contact_us_text": "¿Tienes dudas? no dudes en escribirme si necesitas mas información.",
     "contact_form_sent": "Gracias por tu mensaje. Muy pronto estaré en contacto contigo.",
     "contact_form_sent_error": "Ha ocurrido un error. Por favor intentalo más tarde.",
+    "inscription": "Inscripción",
+    "inscription_form_title": "Para inscribirte, llena por favor el siguiente formulario",
+    "inscription_spanish_learning_question": "¿En dónde has aprendido antes español?",
+    "inscription_are_you_student_question": "¿Eres estudiante?",
+    "inscription_course_question": "Curso de interes",
+    "yes": "Sí",
+    "no": "No",
+    "intermediate_level": "Nivel intermedio",
+    "advanced_level": "Nivel avanzado"
   }
 }

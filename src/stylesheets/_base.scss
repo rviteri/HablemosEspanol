@@ -105,7 +105,8 @@ html {
       @include push-down;
 
       input,
-      textarea {
+      textarea,
+      select {
         background-color: $input-background;
         border: 1px solid $input-border-color;
         padding: 15px;
@@ -118,6 +119,18 @@ html {
 
       label {
         margin-bottom: 5px;
+      }
+    }
+
+    .branded-radio-container {
+      font-size: $base-font-size;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      label,
+      p {
+        margin-bottom: 10px;
       }
     }
 
@@ -157,7 +170,7 @@ html {
 
     &.-blocked {
       pointer-events: none;
-      opacity: 30%;
+      opacity: 0.3;
       transition: opacity 1s;
     }
   }
