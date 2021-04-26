@@ -1,0 +1,34 @@
+.section-contact-us {
+  padding-top: 150px;
+  flex: 1;
+}
+
+.contact-us-container {
+  display: flex;
+}
+
+.contact-us__text {
+  @include grid-column(5);
+
+  h1 {
+    font-size: $base-font-size + 25;
+  }
+
+  p {
+    font-size: $base-font-size + 5;
+  }
+}
+
+.contact-us__form {
+  @include grid-column(6);
+  @include grid-push(1);
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-us__form-sent {
+  background-color: $form-sent-color;
+  text-align: center;
+  padding: 25px;
+  @include push-down;
+}

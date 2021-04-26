@@ -95,6 +95,63 @@ html {
     }
   }
 
+  .branded-form {
+    display: flex;
+    flex-direction: column;
+
+    .branded-input-container {
+      display: flex;
+      flex-direction: column;
+      @include push-down;
+
+      input,
+      textarea {
+        background-color: $input-background;
+        border: 1px solid $input-border-color;
+        padding: 15px;
+        font-size: $base-font-size;
+      }
+
+      textarea {
+        min-height: 150px;
+      }
+
+      label {
+        margin-bottom: 5px;
+      }
+    }
+
+    .branded-form__submit {
+      display: flex;
+      @include push-down;
+
+      .regular-button {
+        min-width: 150px;
+        font-size: $base-font-size;
+      }
+    }
+
+    .branded-form__multiple-input-row {
+      display: flex;
+      .branded-input-container {
+        @include grid-column(6);
+        @include omega(2);
+      }
+    }
+
+    .branded-form__single-row {
+      display: flex;
+      .branded-input-container {
+        @include grid-column(12);
+      }
+    }
+
+    &.-blocked {
+      pointer-events: none;
+      opacity: 30%;
+    }
+  }
+
   .section-under-construction {
     padding-top: 90px;
     background-color: $color-light-brown;

@@ -50,6 +50,13 @@ export const en = {
     "general_public": "Público general",
     "general_public_price": "€90",
     "general_public_price_description": "Abierto para adultos mayores a 18 años.",
-    
+    "name": "Nombre",
+    "lastname": "Apellido(s)",
+    "email": "Email",
+    "message": "Mensaje",
+    "send": "Enviar",
+    "contact_us_title": "Contáctame",
+    "contact_us_text": "¿Tienes dudas? no dudes en escribirme si necesitas mas información.",
+    "contact_form_sent": "Gracias por tu mensaje. Muy pronto estaré en contacto contigo."
   }
 }
