@@ -149,6 +149,7 @@ html {
     &.-blocked {
       pointer-events: none;
       opacity: 30%;
+      transition: opacity 1s;
     }
   }
 

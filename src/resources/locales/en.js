@@ -57,6 +57,7 @@ export const en = {
     "send": "Enviar",
     "contact_us_title": "Contáctame",
     "contact_us_text": "¿Tienes dudas? no dudes en escribirme si necesitas mas información.",
-    "contact_form_sent": "Gracias por tu mensaje. Muy pronto estaré en contacto contigo."
+    "contact_form_sent": "Gracias por tu mensaje. Muy pronto estaré en contacto contigo.",
+    "contact_form_sent_error": "Ha ocurrido un error. Por favor intentalo más tarde.",
   }
 }

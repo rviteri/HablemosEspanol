@@ -10,7 +10,9 @@ import emailjs from 'emailjs-com';
 
 export default function Contactame() {
   const { t, i18n } = useTranslation();
-  const [formSent, setFormSent] = useState(false);
+  const [blockForm, setBlockForm] = useState(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [showErrorMessage, setShowErrorMessage] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -19,12 +21,14 @@ export default function Contactame() {
   function sendEmail(e) {
     e.preventDefault();
 
+    setBlockForm(true);
+
     emailjs.sendForm(process.env.REACT_APP_CONTACT_US_EMAILJS_SERVICE, process.env.REACT_APP_CONTACT_US_EMAILJS_TEMPLATE, e.target, process.env.REACT_APP_EMAILJS_USER_ID)
     .then((result) => {
-        console.log(result.text);
-        setFormSent(true);
+        setShowSuccessMessage(true);
     }, (error) => {
-        console.log(error.text);
+        setBlockForm(false);
+        setShowErrorMessage(true);
     });
   }
 
@@ -38,12 +42,17 @@ export default function Contactame() {
             <p>{t("contact_us_text")}</p>
           </div>
           <div className="contact-us__form">
-            { formSent &&
+            { showSuccessMessage &&
               <div className="contact-us__form-sent">
                 {t("contact_form_sent")}
               </div>
             }
-            <form className={`branded-form${formSent ? " -blocked" : ""}`} onSubmit={sendEmail}>
+            { showErrorMessage &&
+              <div className="contact-us__form-sent -error">
+                {t("contact_form_sent_error")}
+              </div>
+            }
+            <form className={`branded-form${blockForm ? " -blocked" : ""}`} onSubmit={sendEmail}>
               <div className="branded-form__multiple-input-row">
                 <div className="branded-input-container">
                   <label>{t("name")+' *'}</label>

@@ -31,4 +31,9 @@
   text-align: center;
   padding: 25px;
   @include push-down;
+
+  &.-error {
+    background-color: $form-sent-error-color;
+    color: $color-white;
+  }
 }
