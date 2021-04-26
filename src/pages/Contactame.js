@@ -19,7 +19,7 @@ export default function Contactame() {
   function sendEmail(e) {
     e.preventDefault();
 
-    emailjs.sendForm('', '', e.target, '')
+    emailjs.sendForm(process.env.REACT_APP_CONTACT_US_EMAILJS_SERVICE, process.env.REACT_APP_CONTACT_US_EMAILJS_TEMPLATE, e.target, process.env.REACT_APP_EMAILJS_USER_ID)
     .then((result) => {
         console.log(result.text);
         setFormSent(true);
@@ -36,7 +36,6 @@ export default function Contactame() {
           <div className="contact-us__text">
             <h1>{t("contact_us_title")}</h1>
             <p>{t("contact_us_text")}</p>
-            <p>{t(process.env.REACT_APP_TEST_ENV_VARIABLE)}</p>
           </div>
           <div className="contact-us__form">
             { formSent &&
