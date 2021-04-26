@@ -5,6 +5,20 @@
 
 .contact-us-container {
   display: flex;
+
+  @include media-mobile-only {
+    flex-direction: column;
+
+    .contact-us__text {
+      @include grid-column(12);
+      @include push-down;
+    }
+
+    .contact-us__form {
+      @include grid-column(12);
+      @include grid-push(0);
+    }
+  }
 }
 
 .contact-us__text {

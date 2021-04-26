@@ -137,6 +137,15 @@ html {
         @include grid-column(6);
         @include omega(2);
       }
+
+      @include media-mobile-only {
+        flex-direction: column;
+
+        .branded-input-container {
+          @include grid-column(12);
+          @include omega(0);
+        }
+      }
     }
 
     .branded-form__single-row {

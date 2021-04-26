@@ -34,7 +34,7 @@ export default function Contactame() {
 
   return (
     <div>
-      <Header whiteStyle={true} transparent={false}></Header>
+      <Header whiteStyle={false} transparent={false}></Header>
       <section className="section-contact-us">
         <div className="section-content contact-us-container">
           <div className="contact-us__text">
