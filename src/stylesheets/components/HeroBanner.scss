@@ -74,6 +74,14 @@
 @include media-mobile-only {
   .section-hero-banner {
     height: 80vh;
+
+    &.-big-title {
+      .hero-banner-title {
+        font-size: $base-font-size + 33;
+        line-height: $base-font-size + 48;
+        margin-bottom: 0;
+      }
+    }
   }
 
   .section-hero-banner-content {

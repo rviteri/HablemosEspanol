@@ -67,6 +67,7 @@ export const en = {
     "yes": "Sí",
     "no": "No",
     "intermediate_level": "Nivel intermedio",
-    "advanced_level": "Nivel avanzado"
+    "advanced_level": "Nivel avanzado",
+    "course_calendar": "Calendario del curso",
   }
 }

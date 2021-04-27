@@ -43,6 +43,7 @@
   padding: 40px 0px;
 }
 
+.calendar__title,
 .course-info__title {
   font-size: $base-font-size + 14;
   color: $color-dark-grey;
@@ -94,6 +95,20 @@
       @include grid-column(12);
       @include omega(1);
       margin-bottom: 50px;
+    }
+  }
+}
+
+.section-calendar {
+  @include push-down;
+
+  .calendar-container {
+    @include grid-column(10);
+    @include grid-push(1);
+
+    @include media-mobile-and-tablet {
+      @include grid-column(12);
+      @include grid-push(0);
     }
   }
 }

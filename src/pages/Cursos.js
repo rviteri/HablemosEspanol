@@ -4,10 +4,18 @@ import Footer from './../components/Footer';
 import HeroBanner from './../components/HeroBanner';
 import PriceColumn from './../components/PriceColumn';
 import { useTranslation } from 'react-i18next';
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from 'react-markdown';
+import Calendar from "@ericz1803/react-google-calendar";
 
 export default function Cursos() {
   const { t, i18n } = useTranslation();
+  const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
+  let calendars = [
+    {
+      calendarId: process.env.REACT_APP_GOOGLE_COURSES_CALENDAR_ID,
+      // color: "#B241D1" //optional
+    }
+  ];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -128,6 +136,14 @@ export default function Cursos() {
             <ReactMarkdown>
               {t("course_objective_text")}
             </ReactMarkdown>
+          </div>
+        </div>
+      </section>
+      <section className="section-calendar" id="calendario">
+        <div className="section-content section-content-calendar">
+          <div className="calendar-container">
+            <h2 className="calendar__title">{t("course_calendar")}</h2>
+            <Calendar apiKey={API_KEY} calendars={calendars} />
           </div>
         </div>
       </section>
